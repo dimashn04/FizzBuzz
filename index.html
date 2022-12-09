@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <h1 class="title">Get a FizzBuzz Result!</h1>
+    <div class="form-div">
+      <form id="myForm" onsubmit="return false">Type a number: <input type="number" id="num" name="num" value="69"> <button id="submit" onclick="fizzBuzz()">Submit</button></form>
+    </div>
+    <div id="demo"></div>
+    <script>
+        function fizzBuzz(){
+            var num = document.getElementById("num").value;
+            var txt = "";
+            var divDemo = document.getElementById("demo");
+            var paragraph = document.createElement('p');
+
+            if(num % 3 === 0 && num % 5 ===0){
+              txt = "FizzBuzz!" + "<br>";
+            }else if(num % 3 === 0){
+              txt = "Fizz!" + "<br>";
+            }else if(num % 5 === 0){
+              txt = "Buzz!" + "<br>";
+            }else {
+              txt = num + "<br>";
+            }
+
+            paragraph.innerHTML = txt
+            divDemo.append(paragraph);
+        }
+    </script>
+  </body>
+</html>
