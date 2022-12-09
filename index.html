@@ -18,11 +18,10 @@
             var divDemo = document.getElementById("demo");
             var paragraph = document.createElement('p');
 
-            if(num === 0){
+            if(num <= 0){
               txt = "invalid input" + "<br>";
               paragraph.style.color = "red"; 
-            }
-            else if(num % 3 === 0 && num % 5 ===0){
+            }else if(num % 3 === 0 && num % 5 ===0){
               txt = "FizzBuzz!" + "<br>";
             }else if(num % 3 === 0){
               txt = "Fizz!" + "<br>";
