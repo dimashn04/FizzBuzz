@@ -18,7 +18,7 @@
             var divDemo = document.getElementById("demo");
             var paragraph = document.createElement('p');
 
-            if(num <= 0){
+            if(num < 0 || num == 0){
               txt = "invalid input" + "<br>";
               paragraph.style.color = "red"; 
             }else if(num % 3 === 0 && num % 5 ===0){
